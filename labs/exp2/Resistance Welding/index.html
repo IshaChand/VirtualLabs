@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistance Welding</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js"
+        integrity="sha512-yGgPLFnBGQP4L4+2eTbGj0uLoq+CLXmP2+c/hXWdmLYB9jEBfVGjxIqtvFneLCKATOZhDf2YPYG4uSEksWXp+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+
+<body>
+
+    <div class="header">
+        <img src="images/IITR_LOGO.png" id="logo">
+        <h1>Virtual Labs IIT Roorkee</h1>
+        <h1>Manufacturing Science Laboratory</h1>
+        <h2>Resistance Welding</h2>
+    </div>
+
+    <div class="page">
+
+        <div id="leftPanel">
+
+            <div id="buttonControls">
+                <h4>Control Buttons</h4>
+                <input type="button" id="instructions" value="Instructions" onclick="instructions()">
+                <input type="button" id="equipmentDetails" value="Equipment Details" onclick="equipmentDetails()">
+                <input type="button" id="preprocessing" value="Preprocessing" onclick="preprocessing()">
+                <input type="button" id="simulation" value="Simulation" onclick="simulation()">
+                <input type="button" id="result" value="Result" onclick="result()">
+                <input type="button" id="reset" value="Reset" onclick="document.location.reload();">
+            </div>
+
+            <div id="instructionDiv">
+                <h4 style="margin-top:5px;">Instructions</h4>
+                <div id="instndata">
+                    <ul>
+                      <li>In preprocessing, select the type of material and electrode from the dropdown list.</li>
+                      <li>After selection, click on the next button to show the selected materials.</li>
+                      <li>Click on the clean button for cleaning the workpiece then next go for simulation.</li>
+                      <li>In simulation, select the type of resistance welding from the dropdown list.</li>
+                      <li>Select each component one by one from the component panel.</li>
+                      <li>Switch on the power supply for making the connections.</li>
+                      <li>In Spot welding, connect the top of pressure cylinder to upper electrode and the side of that to the lower electrode.</li>
+                      <li>After welding, click on the result button to show result.</li>
+                    </ul>
+                  </div>
+                  <input type="button" value="Back" style="margin-top: 11px;" id="back2btnCtrl" onclick="back2btnCtrl()">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="rightPanel">
+
+            <div id="oneClick">
+                <input type="button" value="Objective of Experiment" id="objective" onclick="objective()">
+                <input type="button" value="Experiment Details" id="details" onclick="details()">
+            </div>
+
+            <div id="aimDiv" class="slides">
+                <h3 style="margin-top: 91px;">Aim</h3>
+                <p id="aim">To join two metals using resistance welding process.</p>
+                <input type="button" style="margin-top: 109px; margin-left: 660px;" value="Back" id="back"
+                    onclick="Back()">
+            </div>
+
+            <div class="slides" id="slide1">
+                <h3>Copper Electrode</h3>
+                <model-viewer src="assets/copperElectrode.glb" camera-controls auto-rotate class="models">
+                </model-viewer>
+                <!-- <img src="images/copperElectrode.png" style="width: 165px; margin-left: 334px; height: 111px;" id="img"> -->
+                <p>When resistance spot welding low conductivity metals, the workpiece material (and not the welding
+                    electrode) becomes heated. Copper is ideal in that it allows the current and heat to flow to the
+                    workpiece.</p>
+                <input type="button" value="Back" style="margin-top: 27px;" id="back" onclick="Back()">
+                <input type="button" value="Next" style="margin-top: 27px;" id="next" onclick="next2()">
+            </div>
+
+            <div class="slides" id="slide2">
+                <h3>Power Supply</h3>
+                <img src="images/powerSupplyRW.png" style="width: 156px; margin-left: 360px; margin-bottom: 7px;"
+                    id="img">
+                <!-- <model-viewer src="assets/electrodeHolder.glb" camera-controls auto-rotate class="models"></model-viewer> -->
+                <p>Welding power supplies provide the energy which both powers and controls the application of heat and
+                    time in resistance welding. The resistance welding power supply (resistance welding controller)
+                    applies high current at low voltage; it transforms, modulates and controls the electrical energy
+                    applying it to the weld according to a defined weld schedule.</p>
+                <input type="button" value="Back" style="margin-top: 18px;" id="back" onclick="Back1()">
+                <input type="button" value="Next" style="margin-top: 18px;" id="next" onclick="next3()">
+            </div>
+
+            <div class="slides" id="slide3">
+                <h3>Pressure Cylinder</h3>
+                <model-viewer src="assets/pressureCylinder.glb" camera-controls auto-rotate class="models">
+                </model-viewer>
+                <p> The cylinder is used for developing the electrode force. The cylinder is rigidly attached to the
+                    welding machine frame, and the moveable piston is connected to the upper electrode. </p>
+                <input type="button" value="Back" style="margin-top: 26px;" id="back" onclick="Back2()">
+                <input type="button" value="Next" style="margin-top: 26px;" id="next" onclick="next4()">
+            </div>
+
+            <div class="slides" id="slide4">
+                <h3>Workpiece</h3>
+                <!-- <img src="images/sheet metal.png" style="width: 165px; margin-left: 334px; height: 111px;" id="img"> -->
+                <model-viewer src="assets/cleanWorkpiece.glb" camera-controls auto-rotate class="models"></model-viewer>
+                <p>Sheet metal is metal formed into thin, flat pieces, usually by an industrial process. Sheet metal is
+                    one of the fundamental forms used in metalworking, and it can be cut and bent into a variety of
+                    shapes.</p>
+                <input type="button" value="Back" style="margin-top: 27px;" id="back" onclick="Back3()">
+                <input type="button" value="Next" style="margin-top: 27px;" id="next" onclick="next5()">
+            </div>
+
+            <div class="slides" id="slide5">
+                <h3>Transformer</h3>
+                <model-viewer src="assets/spotTransformer.glb" camera-controls auto-rotate class="models"></model-viewer>
+                <p>Welding Transformers are used in AC machines to change alternating current from the power line into a
+                    low-voltage, high amperage current in the secondary winding. A combination of primary and/or
+                    secondary taps on the welding transformer are commonly used to provide a macro adjustment of the
+                    welding current, as well as adjustment of secondary voltage. </p>
+                <input type="button" style="margin-top:10px;" value="Back" id="back" onclick="Back4()">
+                <input type="button" style="margin-top:10px;" value="Next" id="next" onclick="next6()">
+            </div>
+
+            <div class="slides" id="slide6">
+                <h3 style="margin-block-end: 0em;">Safety Measures</h3>
+                <p style="text-align: center; font-weight: bold; font-size:20px; margin-top: 10px;">Gloves</p>
+                <img src="images/gloves.png" style="width: 165px; margin-left: 334px; height: 111px;" id="img">
+                <p>Welding gloves can protect you from electric shock, flames, hot parts, sharp or flying metal, and arc
+                    rays. Proper gloves are the first line of defense against the hand hazards of welding and cutting.
+                </p>
+                <input type="button" style="margin-top:27px;" value="Back" id="back" onclick="Back5()">
+                <input type="button" style="margin-top:27px;" value="Next" id="next" onclick="next7()">
+            </div>
+
+            <div class="slides" id="slide7">
+                <h3 style="margin-block-end: 0em;">Safety Measures</h3>
+                <p style="text-align: center; font-weight: bold; font-size:20px; margin-top: 10px;">Helmet</p>
+                <img src="images/helmet.png" style="width: 165px; margin-left: 334px; height: 111px;" id="img">
+                <p>Welding helmets are necessary to prevent arc eye, a painful condition where the cornea is inflamed.
+                    Welding helmets can also prevent retina burns, which can lead to a loss of vision.</p>
+                <input type="button" style="margin-top:27px;" value="Back" id="back" onclick="Back6()">
+                <input type="button" style="margin-top:27px;" value="Details Ended" id="next"
+                    onclick="enablePreprocessing()">
+            </div>
+
+            <div class="slides" id="twoClick">
+
+                <p style="text-align: center; font-weight: bold; font-size:20px;">Select the type of material and
+                    electrode for
+                    the experiment</p>
+
+                <div class="dropdown1">
+                    <label for="materials">Materials</label>
+                    <select name="materials" id="materials" onchange="setMaterialImg()">
+                        <option hidden selected>Select one...</option>
+                        <option value="aluminium">Aluminium</option>
+                        <option value="stainlessSteelMaterial">Stainless Steel</option>
+                        <option value="castIron">Cast Iron</option>
+                        <option value="titanium">Titanium</option>
+                    </select>
+                    <div class="materialInfo info" id="aluminiumInfo">
+                        <p style="font-size:16px;">Aluminium</p>
+                        <ul>
+                            <li>Density: 2.7 g/cm3</li>
+                            <li>Melting point: 660.37°C </li>
+                            <li>Linear thermal expansion coefficient: 23.1 µm/(m·K)</li>
+                            <li>Brinell hardness: 240 MPa</li>
+                        </ul>
+                    </div>
+                    <div class="materialInfo info" id="stainlessSteelMaterialInfo">
+                        <p style="font-size:16px;">Stainless Steel</p>
+                        <ul>
+                            <li>Density: 7.93 g/cm3</li>
+                            <li>Melting point: 1450 °C </li>
+                            <li>Linear thermal expansion coefficient: 16.5 µm/(m·K)</li>
+                            <li>Brinell hardness: 201 MPa</li>
+                        </ul>
+                    </div>
+                    <div class="materialInfo info" id="castIronInfo">
+                        <p style="font-size:16px;">Cast Iron</p>
+                        <ul>
+                            <li>Density: 7.15 g/cm3</li>
+                            <li>Melting point: 1150 °C</li>
+                            <li>Linear thermal expansion coefficient: 10.5 µm/(m·K)</li>
+                            <li>Brinell hardness: 170 MPa</li>
+                        </ul>
+                    </div>
+                    <div class="materialInfo info" id="titaniumInfo">
+                        <p style="font-size:16px;">Titanium</p>
+                        <ul>
+                            <li>Density: 4.54 g/cm3</li>
+                            <li>Melting point: 1670 °C </li>
+                            <li>Linear thermal expansion coefficient: 8.4 µm/(m·K)</li>
+                            <li>Brinell hardness: 900 MPa</li>
+                        </ul>
+                    </div>
+                    <img id="materialImg" src="">
+                </div>
+
+                <div class="dropdown2">
+                    <label for="electrodes">Electrodes</label>
+                    <select name="electrodes" id="electrodes" onchange="setElectrodeImg()">
+                        <option hidden selected>Select one...</option>
+                        <option value="copper">Copper</option>
+                    </select>
+                    <div class="electrodeInfo info" id="copperInfo">
+                        <p style="font-size:16px;">Copper</p>
+                        <ul>
+                            <li>Density: 8.96 g/cm3</li>
+                            <li>Melting point: 1085 °C </li>
+                            <li>Linear thermal expansion coefficient: 16.2 µm/(m·K)</li>
+                            <li>Brinell hardness: 250 MPa</li>
+                        </ul>
+                    </div>
+                    <!-- <img id="electrodeImg" src=""> -->
+                    <model-viewer src="assets/copperElectrode.glb" camera-controls auto-rotate id="electrodeImg">
+                    </model-viewer>
+                </div>
+
+                <input type="button" value="Next" id="nextSelected" onclick="selectedImgs()">
+
+            </div>
+
+            <div class="slides" id="selectedImgDiv">
+
+                <div class="selectedMatDiv" id="selectedMaterial">
+                    <h3>Material</h3>
+                    <img id="selectedMatImg" src="">
+                </div>
+
+                <div class="selectedElecDiv" id="selectedElectrode" style="margin-left: 420px;">
+                    <h3>Electrode</h3>
+                    <model-viewer src="assets/copperElectrode.glb" camera-controls auto-rotate id="selectedElecImg">
+                    </model-viewer>
+                </div>
+
+                <img src="images/sandpaper.png" id="sandpaper1" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper2" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper3" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper4" class="sandppr">
+
+                <img src="images/sandpaper.png" id="sandpaper1ssm" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper2ssm" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper3ssm" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper4ssm" class="sandppr">
+
+                <img src="images/sandpaper.png" id="sandpaper1ci" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper2ci" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper3ci" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper4ci" class="sandppr">
+
+                <img src="images/sandpaper.png" id="sandpaper1tit" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper2tit" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper3tit" class="sandppr">
+                <img src="images/sandpaper.png" id="sandpaper4tit" class="sandppr">
+
+                <input type="button" value="Back" id="back2selection" onclick="back2selection()">
+                <input type="button" value="Clean" id="next" onclick="next2cleaning()">
+                <input type="button" value="Next" id="afterCleanBtn" onclick="enableSimulation()"
+                    style="visibility:hidden;">
+            </div>
+
+            <div class="slides" id="threeClick">
+
+                <div id="dropdown3">
+                    <label for="weldType">Type of welding </label>
+                    <select name="weldType" id="weldType" onchange="setWelding()">
+                        <option hidden selected>Select one...</option>
+                        <option value="spot">Spot Welding</option>
+                        <option value="seam">Seam Welding</option>
+                    </select>
+                </div>
+
+                <div id="componentPanel" style="visibility: hidden;">
+                    <h4 id="headComponent" style="text-align:left; margin-top:5px; margin-left:28px;">Components</h4>
+
+                    <figure class="figure" id="fig1">
+                        <img src="" onclick="rtbtn()" id="rtbtn">
+                        <figcaption style="margin-top: 52px; left: 25px;">Resistance Transformer</figcaption>
+                    </figure>
+
+                    <figure class="figure" id="fig2">
+                        <img src="images/powerplug.png" onclick="psbtn()" id="psbtn">
+                        <figcaption style="margin-left: 5px;">Power Supply</figcaption>
+                    </figure>
+
+                    <figure class="figure" id="fig3">
+                        <img src="images/pressureCylinder.png" onclick="pcbtn()" id="pcbtn" class="pcbtn">
+                        <figcaption id="fig3cap">Pressure Cylinder</figcaption>
+                    </figure>
+
+                    <figure class="figure" id="fig4">
+                        <img src="images/controller.png" onclick="ctrlrbtn()" id="ctrlrbtn">
+                        <figcaption>Pressure Controller</figcaption>
+                    </figure>
+
+                    <figure class="figure" id="fig5">
+                        <img src="images/tongs.png" onclick="etbtn()" id="etbtn">
+                        <figcaption id="fig5cap">Electrode Tongs</figcaption>
+                    </figure>
+
+                    <figure class="figure" id="fig6">
+                        <img src="images/aluminium.png" onclick="wpbtn()" id="wpbtn">
+                        <figcaption style="left: 11px;">Workpiece</figcaption>
+                    </figure>
+                </div>
+
+                <div id="targetPS">
+
+                </div>
+                <div id="top" class="points" onclick="topCon()">
+
+                </div>
+                <div id="side" class="points" onclick="sideCon()">
+
+                </div>
+                <model-viewer src="" camera-orbit="30deg 80deg 90%" id="resistanceTransformer"
+                    class="components resistanceTransformer">
+                </model-viewer>
+
+                <img src="images/powerplug.png" id="powerPlug" style="visibility: hidden;" onclick="setPower()">
+
+                <model-viewer src="assets/pressureCylinder.glb" camera-orbit="-50deg 85deg 95%" id="pressureCylinder"
+                    class="components">
+                </model-viewer>
+
+                <model-viewer src="assets/motor.glb" camera-orbit="26deg 85deg 95%" id="motor" class="components">
+                </model-viewer>
+
+                <img src="images/greenrod.png" style="visibility: hidden;" id="greenrod">
+                <img src="images/blackrod1.png" id="blackrod1">
+                <img src="images/blackrod2.png" id="blackrod2">
+
+                <model-viewer src="assets/controller.glb" camera-orbit="-50deg 85deg 95%" id="resistanceController"
+                    class="components">
+                </model-viewer>
+
+                <model-viewer src="assets/tong.glb" camera-orbit="20deg 80deg 100%" id="tong1"
+                    class="components copperTongs">
+                </model-viewer>
+
+                <model-viewer src="assets/tong.glb" camera-orbit="20deg 80deg 100%" id="tong2"
+                    class="components copperTongs">
+                </model-viewer>
+
+                <model-viewer src="assets/seamElec.glb" camera-orbit="20deg 80deg 100%" id="se1"
+                    class="components seamElecs">
+                </model-viewer>
+                <model-viewer src="assets/seamElec.glb" camera-orbit="20deg 80deg 100%" id="se2"
+                    class="components seamElecs">
+                </model-viewer>
+
+                <model-viewer src="assets/lapJoint.glb" id="workpiece" onclick="welding()" class="components">
+                </model-viewer>
+
+                <img src="images/topline.png" id="topline">
+                <img src="images/sideline.png" id="sideline">
+
+                <div id="weldingArea" style="visibility: hidden;">
+                    <svg id="svgbox"
+                        style="left: 349px; top: 125px; height: 179px; width: 247px; position: absolute; z-index: 4;">
+
+                        <line id="line1" x1="0" y1="80" x2="247" y2="0"
+                            style="stroke:rgb(112, 196, 229); stroke-width:0.5"></line>
+                        <line id="line2" x1="0" y1="102" x2="247" y2="179"
+                            style="stroke:rgb(112, 196, 229); stroke-width:0.5"></line>
+
+                    </svg>
+
+                    <div id="smallArea" class="smallArea"></div>
+
+                    <div id="zoomedArea">
+                        <img src="images/zoom1.png" id="zoom">
+                        <img src="images/heat.png" id="heat">
+                    </div>
+                </div>
+
+                <div id="weldingArea2" style="visibility: hidden;">
+                    <svg id="svgbox"
+                        style="left: 364px; top: 92px; height: 197px; width: 209px; position: absolute; z-index: 4;">
+
+                        <line id="line1" x1="0" y1="80" x2="210" y2="0"
+                            style="stroke:rgb(112, 196, 229); stroke-width:0.5"></line>
+                        <line id="line2" x1="0" y1="102" x2="210" y2="197"
+                            style="stroke:rgb(112, 196, 229); stroke-width:0.5"></line>
+
+                    </svg>
+
+                    <div id="smallArea2" class="smallArea" style="top: 173px; left: 343px;"></div>
+
+                    <div id="zoomedArea2">
+                        <img src="images/wheel.png" id="wheel1" class="wheel">
+                        <img src="images/zoomedSeamWP.png" id="zoomseam">
+                        <img src="images/wheel.png" style="top: 100px;" id="wheel2" class="wheel">
+                        <div id="weldingLine" class="linediv">
+                            <div id="line" class="line"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="resultPanel">
+            <div class="resultSlide" id="res">
+                <p style="text-align: center; font-weight: bold; font-size:20px; margin-top: 10px;">Resistance welding
+                    has been
+                    performed.</p>
+                <p style="text-align: center; font-weight: bold; font-size:20px; margin-top: 10px;">Welded Metal</p>
+                <model-viewer src="" camera-controls id="cleanWorkpiece"></model-viewer>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <footer>&#169; Copyright 2022 Virtual Labs, IIT Roorkee</footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+
+
+</html>

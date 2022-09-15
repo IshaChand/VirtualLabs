@@ -1,0 +1,1348 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+.header {
+  height: 122px;
+  background-color: #495C83;
+  width: 1175px;
+}
+
+#logo {
+  width: 93px;
+  height: 83px;
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.models {
+  left: 261px;
+  width: 300px;
+  height: 140px;
+  margin-block-end: 4px;
+}
+
+h1 {
+  /* padding-left: 425px; */
+  text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: white;
+}
+
+h2 {
+  color: white;
+  background-color: #231955;
+  /* padding-left: 508px; */
+  text-align: center;
+}
+
+h4 {
+  margin-block-end: 0em;
+  text-align: center;
+  margin-block-start: 0em;
+}
+
+h3 {
+  /*for writing aim*/
+  text-align: center;
+  font-size: 25px;
+}
+
+#leftPanel {
+  width: 316px;
+  height: 367px;
+  position: absolute;
+  background-color: #E6E6E6;
+}
+
+#rightPanel {
+  width: 860px;
+  height: 367px;
+  margin-left: 315px;
+  background-color: #F2F2F2;
+  position: absolute;
+}
+
+#buttonControls {
+  margin: 50px;
+  margin-top: 27px;
+  padding-bottom: 10px;
+  border: 2px solid #495C83;
+  border-radius: 2%;
+}
+
+#back2btnCtrl {
+  left: 189px;
+  top: 303px;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+}
+
+#instructionDiv {
+  width: 296px;
+  height: 350px;
+  top: 7px;
+  left: 6px;
+  position: absolute;
+  border: 2px solid #495C83;
+  border-radius: 2%;
+  visibility: hidden;
+}
+
+#instndata {
+  margin-left: -8px;
+  margin-right: 25px;
+  text-align: justify;
+  font-size: 12.5px;
+}
+
+#aimDiv {
+  border: 2px solid #495C83;
+  border-radius: 2%;
+  width: 840px;
+  position: absolute;
+  margin: 10px;
+  height: 345px;
+  visibility: hidden;
+}
+
+.slides {
+  border: 2px solid #495C83;
+  border-radius: 2%;
+  width: 840px;
+  position: absolute;
+  margin: 10px;
+  height: 345px;
+  visibility: hidden;
+}
+
+#oneClick {
+  position: absolute;
+  margin: 60px;
+  border: 2px solid #495C83;
+  padding: 20px;
+  width: 663px;
+  height: 205px;
+  visibility: hidden;
+  border-radius: 2%
+}
+
+#objective {
+  display: block;
+  margin-left: 179px;
+  margin-top: 34px;
+  width: 300px;
+  height: 34px;
+}
+
+#details {
+  display: block;
+  margin-top: 60px;
+  margin-left: 179px;
+  width: 300px;
+  height: 34px;
+}
+
+#back,
+#back2selection {
+  margin-left: 500px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  margin-top: 297px;
+}
+
+#next,
+#afterCleanBtn {
+  margin-left: 660px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  margin-top: 297px;
+}
+
+#nextSelected {
+  margin-left: 660px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  margin-top: 253px;
+  visibility: hidden;
+}
+
+#aim {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#objective:hover,
+#details:hover,
+#back:hover,
+#next:hover,
+#nextSelected:hover,
+#afterCleanBtn:hover,
+#back2btnCtrl:hover {
+  background-color: #6E85B7;
+  color: white;
+  border: 2px solid #495C83;
+  border-radius: 10%;
+}
+
+p {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  margin-block-start: 0em;
+  text-align: justify;
+}
+
+.dropdown1 {
+  margin-top: 15px;
+  margin-left: 20px;
+  position: absolute;
+}
+
+.dropdown2 {
+  margin-left: 20px;
+  position: absolute;
+  margin-top: 140px;
+}
+
+#img {
+  animation: rotation 3s infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+#materials {
+  margin-left: 20px;
+}
+
+#electrodes {
+  margin-left: 8px;
+}
+
+#materialImg,
+#electrodeImg {
+  width: 166px;
+  height: 88px;
+  position: absolute;
+  /* margin-left: 431px; */
+  visibility: hidden;
+}
+
+#electrodeImg{
+  left: 636px;
+}
+
+#materialImg{
+  left: 634px;
+}
+
+.selectedElecDiv,
+.selectedMatDiv {
+  width: 420px;
+  position: absolute;
+}
+
+#selectedMatImg,
+#selectedElecImg {
+  position: absolute;
+  left: 20%;
+  top: 75%;
+  height: 210px;
+  right: 20%;
+  width: 260px;
+}
+
+.materialInfo,
+.electrodeInfo {
+  margin-left: 300px;
+  margin-top: -19px;
+  position: absolute;
+  width: 400px;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.sandppr {
+  width: 70px;
+  margin-left: 60px;
+  position: absolute;
+  visibility: hidden;
+  animation-duration: 0.7s, 0.2s;
+  animation-iteration-count: 2, infinite;
+  animation-direction: alternate;
+  animation-play-state: paused;
+  animation-timing-function: ease-in-out;
+}
+
+#sandpaper1 {
+  margin-top: 100px;
+  animation-name: horizontal1, rubbing;
+}
+
+@keyframes horizontal1 {
+  from {
+    margin-top: 65px;
+    margin-left: 158px;
+  }
+
+  to {
+    margin-top: 65px;
+    margin-left: 200px;
+  }
+}
+
+@keyframes rubbing {
+  from {
+    transform: rotate(-15deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+#sandpaper2 {
+  animation-name: horizontal2, rubbing;
+}
+
+@keyframes horizontal2 {
+  from {
+    margin-top: 104px;
+    margin-left: 60px;
+  }
+
+  to {
+    margin-top: 104px;
+    margin-left: 238px;
+  }
+}
+
+#sandpaper3 {
+  animation-name: horizontal3, rubbing;
+}
+
+@keyframes horizontal3 {
+  from {
+    margin-top: 153px;
+    margin-left: 103px;
+  }
+
+  to {
+    margin-top: 153px;
+    margin-left: 279px;
+  }
+}
+
+#sandpaper4 {
+  animation-name: horizontal4, rubbing;
+}
+
+@keyframes horizontal4 {
+  from {
+    margin-top: 183px;
+    margin-left: 124px;
+  }
+
+  to {
+    margin-top: 183px;
+    margin-left: 187px;
+  }
+}
+
+#sandpaper1ssm {
+  animation-name: h1ssm, rubbing;
+}
+
+@keyframes h1ssm {
+  from {
+    margin-top: 90px;
+    margin-left: 107px;
+  }
+
+  to {
+    margin-top: 90px;
+    margin-left: 200px;
+  }
+}
+
+#sandpaper2ssm {
+  animation-name: h2ssm, rubbing;
+}
+
+@keyframes h2ssm {
+  from {
+    margin-top: 128px;
+    margin-left: 101px;
+  }
+
+  to {
+    margin-top: 128px;
+    margin-left: 263px;
+  }
+}
+
+#sandpaper3ssm {
+  animation-name: h3ssm, rubbing;
+}
+
+@keyframes h3ssm {
+  from {
+    margin-top: 163px;
+    margin-left: 125px;
+  }
+
+  to {
+    margin-top: 163px;
+    margin-left: 222px;
+  }
+}
+
+#sandpaper4ssm {
+  animation-name: h4ssm, rubbing;
+}
+
+@keyframes h4ssm {
+  from {
+    margin-top: 182px;
+    margin-left: 159px;
+  }
+
+  to {
+    margin-top: 182px;
+    margin-left: 239px;
+  }
+}
+
+#sandpaper1ci {
+  animation-name: h1ci, rubbing;
+  animation-duration: 1s, 0.2s;
+}
+
+@keyframes h1ci {
+  from {
+    margin-top: 44px;
+    margin-left: 48px;
+  }
+
+  to {
+    margin-top: 44px;
+    margin-left: 300px;
+  }
+}
+
+#sandpaper2ci {
+  animation-name: h2ci, rubbing;
+  animation-duration: 1s, 0.2s;
+}
+
+@keyframes h2ci {
+  from {
+    margin-top: 98px;
+    margin-left: 48px;
+  }
+
+  to {
+    margin-top: 98px;
+    margin-left: 300px;
+  }
+}
+
+#sandpaper3ci {
+  animation-name: h3ci, rubbing;
+  animation-duration: 1s, 0.2s;
+}
+
+@keyframes h3ci {
+  from {
+    margin-top: 158px;
+    margin-left: 48px;
+  }
+
+  to {
+    margin-top: 158px;
+    margin-left: 300px;
+  }
+}
+
+#sandpaper4ci {
+  animation-name: h4ci, rubbing;
+  animation-duration: 1s, 0.2s;
+}
+
+@keyframes h4ci {
+  from {
+    margin-top: 224px;
+    margin-left: 48px;
+  }
+
+  to {
+    margin-top: 224px;
+    margin-left: 300px;
+  }
+}
+
+#sandpaper1tit {
+  animation-name: h1tit, rubbing;
+}
+
+@keyframes h1tit {
+  from {
+    margin-top: 52px;
+    margin-left: 176px;
+  }
+
+  to {
+    margin-top: 52px;
+    margin-left: 290px;
+  }
+}
+
+#sandpaper2tit {
+  animation-name: h2tit, rubbing;
+}
+
+@keyframes h2tit {
+  from {
+    margin-top: 91px;
+    margin-left: 128px;
+  }
+
+  to {
+    margin-top: 91px;
+    margin-left: 247px;
+  }
+}
+
+#sandpaper3tit {
+  animation-name: h3tit, rubbing;
+}
+
+@keyframes h3tit {
+  from {
+    margin-top: 134px;
+    margin-left: 84px;
+  }
+
+  to {
+    margin-top: 134px;
+    margin-left: 195px;
+  }
+}
+
+#sandpaper4tit {
+  animation-name: h4tit, rubbing;
+}
+
+@keyframes h4tit {
+  from {
+    margin-top: 190px;
+    margin-left: 73px;
+  }
+
+  to {
+    margin-top: 190px;
+    margin-left: 140px;
+  }
+}
+
+#dropdown3 {
+  margin-top: 6px;
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 16.5px;
+}
+
+#weldingMachine {
+  width: 165px;
+  height: 175px;
+  left: 160px;
+  margin-top: 50px;
+  position: absolute;
+  /* z-index: 2; */
+}
+
+#powerPlug {
+  width: 68px;
+  height: 60px;
+  left: 381px;
+  position: absolute;
+  margin-top: 28px;
+  z-index: 2;
+}
+
+@keyframes glow {
+  0% {
+    background-color: #b5ff9f;
+    box-shadow: 0 0 5px #b5ff9f;
+  }
+
+  50% {
+    background-color: #7bf656;
+    box-shadow: 0 0 20px #7bf656;
+  }
+
+  100% {
+    background-color: #b5ff9f;
+    box-shadow: 0 0 5px #b5ff9f;
+  }
+}
+
+.arrow {
+  position: absolute;
+  z-index: 2;
+  animation: blinker 0.6s linear infinite;
+  visibility: hidden;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#workpiece {
+  left: 341px;
+  width: 150px;
+  height: 227px;
+  position: absolute;
+  top: 117px;
+  animation: magnify 1.7s linear;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+
+@keyframes magnify {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(2, 2);
+    top: 110px;
+    left: 393px;
+    height: 179px;
+  }
+}
+
+@keyframes magnifyL {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(2, 2);
+    left: 394px;
+    top: 196px;
+  }
+}
+
+@keyframes magnifyE {
+  0% {
+    transform: scale(1, 1);
+    z-index: 3;
+  }
+
+  100% {
+    transform: scale(2, 2);
+    left: 391px;
+    top: 164px;
+    z-index: 3;
+    height: 141px;
+  }
+}
+
+@keyframes rotationWP {
+  from {
+    transform: rotateY(0deg) scale(2, 2);
+  }
+
+  to {
+    transform: rotateY(180deg) scale(2, 2);
+  }
+}
+
+#electrodeHolder {
+  width: 140px;
+  left: 513px;
+  top: 168px;
+  position: absolute;
+  height: 140px;
+  z-index: 2;
+}
+
+#electrodeHolder2 {
+  width: 104px;
+  left: 577px;
+  top: -22px;
+  position: absolute;
+  height: 104px;
+  z-index: 5;
+  animation: moveElecB 3.5s linear;
+  animation-play-state: paused;
+}
+
+@keyframes moveElecB {
+  from {
+    left: 577px;
+    top: -22px;
+  }
+
+  to {
+    left: 485px;
+    top: 81px;
+  }
+}
+
+@keyframes moveElecB2 {
+  from {
+    left: 478px;
+    top: 87px;
+  }
+
+  to {
+    /* left: 388px;
+    top: 183px; */
+    left: 384px;
+    top: 191px;
+  }
+}
+
+@keyframes moveElecT {
+  from {
+    left: 477px;
+    top: 108px;
+  }
+
+  to {
+    left: 433px;
+    top: 187px;
+  }
+}
+
+@keyframes moveElecT2 {
+  from {
+    left: 489px;
+    top: 116px;
+  }
+
+  to {
+    left: 448px;
+    top: 187px;
+  }
+}
+
+@keyframes moveElecL {
+  from {
+    left: 432px;
+    top: 135px;
+  }
+
+  to {
+    left: 432px;
+    top: 182px;
+  }
+}
+
+@keyframes moveElecL2 {
+  from {
+    left: 484px;
+    top: 131px;
+  }
+
+  to {
+    left: 484px;
+    top: 190px;
+  }
+}
+
+@keyframes moveElecC {
+  from {
+    top: 124px;
+    left: 527px;
+  }
+
+  to {
+    top: 191px;
+    left: 556px;
+  }
+}
+
+@keyframes moveElecC2 {
+  from {
+    left: 580px;
+    top: 160px;
+  }
+
+  to {
+    left: 538px;
+    top: 186px;
+  }
+}
+
+@keyframes moveElecE {
+  from {
+    top: 167px;
+    left: 355px;
+  }
+
+  to {
+    top: 207px;
+    left: 359px;
+  }
+}
+
+#clamp {
+  width: 115px;
+  height: 100px;
+  top: 210px;
+  left: 261px;
+  position: absolute;
+}
+
+#wmbtn {
+  width: 60px;
+  position: absolute;
+  margin-left: 6px;
+}
+
+#psbtn {
+  width: 47px;
+  margin-left: 12px;
+}
+
+#cabelbtn {
+  margin-top: 50px;
+  margin-left: 17px;
+}
+
+#wpbtn {
+  width: 80px;
+  margin-top: -7px;
+}
+
+#elecbtn {
+  height: 38px;
+  width: 59px;
+  position: absolute;
+  left: 49px;
+  margin-top: -40px
+}
+
+#clampbtn {
+  width: 85px;
+  margin-left: 2px;
+  margin-top: -21px;
+}
+
+.components {
+  visibility: hidden;
+}
+
+.figure {
+  width: 80px;
+  height: 70px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-left: 40px;
+}
+
+figcaption {
+  position: absolute;
+  font-size: 10px;
+}
+
+#targetPS {
+  width: 40px;
+  height: 40px;
+  margin-top: 138px;
+  margin-left: 255px;
+  position: absolute;
+}
+
+#positiveTerminal {
+  width: 10px;
+  height: 10px;
+  margin-top: 187px;
+  margin-left: 253px;
+  position: absolute;
+  z-index: 4;
+}
+
+.negativeTerminal {
+  width: 10px;
+  height: 10px;
+  margin-top: 187px;
+  margin-left: 223px;
+  position: absolute;
+}
+
+#positiveTarget {
+  width: 7px;
+  height: 7px;
+  margin-top: 256px;
+  margin-left: 276px;
+  position: absolute;
+  z-index: 2;
+}
+
+#negativeTarget {
+  width: 8px;
+  height: 8px;
+  margin-top: 251px;
+  margin-left: 630px;
+  position: absolute;
+  z-index: 2;
+}
+
+#negativeTarget2 {
+  width: 8px;
+  height: 8px;
+  top: 22px;
+  left: 655px;
+  position: absolute;
+  z-index: 2;
+}
+
+.spark {
+  width: 148px;
+  height: 127px;
+  position: absolute;
+  z-index: 5;
+  visibility: hidden;
+}
+
+#sparkB {
+  top: 24px;
+  left: 511px;
+  animation: weldB 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldB {
+  from {
+    top: 24px;
+    left: 511px;
+  }
+
+  to {
+    top: 240px;
+    left: 313px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#sparkT {
+  animation: weldT 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldT {
+  from {
+    top: 163px;
+    left: 409px;
+  }
+
+  to {
+    top: 239px;
+    left: 364px;
+  }
+}
+
+#sparkT2 {
+  animation: weldT2 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldT2 {
+  from {
+    left: 415px;
+    top: 166px;
+  }
+
+  to {
+    left: 376px;
+    top: 241px;
+  }
+}
+
+#sparkL {
+  left: 365px;
+  animation: weldL 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldL {
+  from {
+    top: 182px;
+  }
+
+  to {
+    top: 232px;
+  }
+}
+
+#sparkL2 {
+  left: 409px;
+  animation: weldL2 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldL2 {
+  from {
+    top: 183px;
+  }
+
+  to {
+    top: 239px;
+  }
+}
+
+#sparkC {
+  animation: weldC 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldC {
+  from {
+    top: 175px;
+    left: 454px;
+  }
+
+  to {
+    top: 241px;
+    left: 483px;
+  }
+}
+
+#sparkC2 {
+  animation: weldC2 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldC2 {
+  from {
+    left: 507px;
+    top: 211px;
+  }
+
+  to {
+    left: 468px;
+    top: 235px;
+  }
+}
+
+#sparkE {
+  left: 289px;
+  z-index: 4;
+  animation: weldE 7s linear, blink 0.1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes weldE {
+  from {
+    top: 217px;
+  }
+
+  to {
+    top: 259px;
+  }
+}
+
+.lineB {
+  width: 8px;
+  height: 291px;
+  position: absolute;
+  left: 493px;
+  top: 42px;
+  z-index: 2;
+  transform: rotate(42deg);
+}
+
+.lineT {
+  width: 8px;
+  height: 90px;
+  position: absolute;
+  left: 468px;
+  top: 205px;
+  z-index: 2;
+  transform: rotate(30deg);
+}
+
+.lineT2 {
+  width: 8px;
+  height: 90px;
+  position: absolute;
+  left: 477px;
+  top: 209px;
+  z-index: 2;
+  transform: rotate(28deg);
+}
+
+.lineL {
+  width: 8px;
+  height: 50px;
+  position: absolute;
+  left: 441px;
+  top: 235px;
+  z-index: 2;
+}
+
+.lineL2 {
+  width: 8px;
+  height: 60px;
+  position: absolute;
+  left: 492px;
+  top: 231px;
+  z-index: 2;
+}
+
+.lineC {
+  width: 8px;
+  height: 72px;
+  position: absolute;
+  left: 550px;
+  top: 223px;
+  z-index: 2;
+  transform: rotate(-25deg);
+}
+
+.lineC2 {
+  width: 8px;
+  height: 54px;
+  position: absolute;
+  left: 567px;
+  top: 248px;
+  z-index: 2;
+  transform: rotate(57deg);
+}
+
+.lineE {
+  width: 8px;
+  height: 43px;
+  position: absolute;
+  left: 367px;
+  top: 267px;
+  z-index: 3;
+  transform: rotate(-5deg);
+}
+
+.line {
+  height: 2px;
+  background: #999999;
+  position: absolute;
+  top: 2px;
+  width: 6px;
+  z-index: 2;
+}
+
+#line {
+  animation: increase 7s linear;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+#line2 {
+  animation: increase 7s linear;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+
+.smline {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 2;
+  visibility: hidden;
+}
+
+#smlineT {
+  top: 273px;
+  left: 426px;
+  border-left: 10px solid transparent;
+  border-bottom: 14px solid #CCCCCC;
+  border-right: 4px solid transparent;
+  transform: rotate(12deg);
+}
+
+#smlineC {
+  top: 267px;
+  left: 509px;
+  border-left: 15px solid transparent;
+  border-bottom: 18px solid #CCCCCC;
+}
+
+.resultPanel {
+  width: 860px;
+  height: 367px;
+  background-color: #F2F2F2;
+  position: absolute;
+  top: 122px;
+  left: 315px;
+  visibility: hidden;
+}
+
+.resultSlide {
+  border: 2px solid #495C83;
+  border-radius: 2%;
+  width: 840px;
+  position: absolute;
+  margin: 10px;
+  height: 345px;
+  visibility: hidden;
+}
+
+#cleanWorkpiece {
+  left: 300px;
+  top: 50px;
+  width: 250px;
+  height: 280px;
+  position: absolute;
+}
+
+.components:hover {
+  animation: zoomIn 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(1.5, 1.5);
+    z-index: 4;
+  }
+}
+
+
+line {
+  visibility: hidden;
+}
+
+/* #powerLine{
+  top: 79px;
+  position: absolute;
+  left: 374px;
+  width: 100px;
+} */
+
+/* #currentSupply{
+  top: 79px;
+  position: absolute;
+  left: 374px;
+  offset-path: path('M20,20 C20,100 200,0 200,100');
+  animation: move infinite 3s;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: black;
+
+}
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+} */
+
+#equipmentDetails,
+#preprocessing,
+#simulation,
+#result,
+#reset,
+#instructions {
+  margin-left: 29px;
+  display: block;
+  width: 155px;
+  font-size: 16px;
+}
+
+#instructions {
+  margin-top: 10px;
+}
+
+#equipmentDetails {
+  /* margin-top: 10px; */
+  margin-top: 25px;
+}
+
+#preprocessing {
+  margin-top: 25px;
+}
+
+#simulation {
+  margin-top: 25px;
+}
+
+#result {
+  margin-top: 25px;
+}
+
+#reset {
+  margin-top: 25px;
+}
+
+#equipmentDetails:hover,
+#preprocessing:hover,
+#simulation:hover,
+#result:hover,
+#reset:hover,
+#instructions:hover {
+  background-color: #6E85B7;
+  color: white;
+  border: 2px solid #495C83;
+  border-radius: 10%;
+}
+
+footer {
+  background-color: #495C83;
+  width: 1175px;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 367px;
+}

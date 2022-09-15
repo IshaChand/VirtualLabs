@@ -1,0 +1,1083 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+.header {
+    height: 122px;
+    background-color: #495C83;
+    width: 1175px;
+}
+
+#logo {
+    width: 93px;
+    height: 83px;
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+h1 {
+    /* padding-left: 425px; */
+    text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: white;
+}
+
+h2 {
+    color: white;
+    background-color: #231955;
+    /* padding-left: 508px; */
+    text-align: center;
+}
+
+h4 {
+    margin-block-end: 0em;
+    text-align: center;
+    margin-block-start: 0em;
+}
+
+#leftPanel {
+    width: 316px;
+    height: 367px;
+    position: absolute;
+    background-color: #E6E6E6;
+}
+
+#rightPanel {
+    width: 860px;
+    height: 367px;
+    margin-left: 315px;
+    background-color: #F2F2F2;
+    position: absolute;
+}
+
+#buttonControls {
+    margin: 50px;
+    margin-top: 27px;
+    padding-bottom: 10px;
+    border: 2px solid #495C83;
+    border-radius: 2%;
+}
+
+#back2btnCtrl {
+    left: 189px;
+    top: 303px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+}
+
+#instructionDiv {
+    width: 296px;
+    height: 350px;
+    top: 7px;
+    left: 6px;
+    position: absolute;
+    border: 2px solid #495C83;
+    border-radius: 2%;
+    visibility: hidden;
+}
+
+#instndata {
+    margin-left: -8px;
+    margin-right: 25px;
+    text-align: justify;
+    font-size: 12.5px;
+}
+
+.slides {
+    border: 2px solid #495C83;
+    border-radius: 2%;
+    width: 840px;
+    position: absolute;
+    margin: 10px;
+    height: 345px;
+    visibility: hidden;
+}
+
+#oneClick {
+    position: absolute;
+    margin: 60px;
+    border: 2px solid #495C83;
+    padding: 20px;
+    width: 663px;
+    height: 205px;
+    visibility: hidden;
+    border-radius: 2%
+}
+
+#objective {
+    display: block;
+    margin-left: 179px;
+    margin-top: 34px;
+    width: 300px;
+    height: 34px;
+}
+
+#details {
+    display: block;
+    margin-top: 60px;
+    margin-left: 179px;
+    width: 300px;
+    height: 34px;
+}
+
+#back,
+#back2selection {
+    margin-left: 500px;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    margin-top: 297px;
+}
+
+#next,
+#afterCleanBtn {
+    margin-left: 660px;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    margin-top: 297px;
+}
+
+#aim {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+h3 {
+    /*for writing aim*/
+    text-align: center;
+    font-size: 25px;
+}
+
+#img {
+    animation: rotation 3s infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+.models {
+    left: 261px;
+    width: 300px;
+    height: 140px;
+    margin-block-end: 4px;
+}
+
+p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    margin-block-start: 0em;
+    text-align: justify;
+}
+
+#materials {
+    margin-left: 20px;
+}
+
+#electrodes {
+    margin-left: 8px;
+}
+
+#electrodeImg {
+    margin-left: 625px;
+    width: 180px;
+    height: 110px;
+    margin-top: -20px;
+    position: absolute;
+    visibility: hidden;
+}
+
+#materialImg {
+    width: 166px;
+    height: 88px;
+    position: absolute;
+    margin-left: 431px;
+    visibility: hidden;
+}
+
+.materialInfo,
+.electrodeInfo {
+    margin-left: 300px;
+    margin-top: -19px;
+    position: absolute;
+    width: 400px;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.dropdown1 {
+    margin-top: 15px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.dropdown2 {
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 140px;
+}
+
+#nextSelected {
+    margin-left: 660px;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    margin-top: 253px;
+    visibility: hidden;
+}
+
+.selectedElecDiv,
+.selectedMatDiv {
+    width: 420px;
+    position: absolute;
+}
+
+#selectedMatImg {
+    position: absolute;
+    left: 20%;
+    top: 75%;
+    height: 210px;
+    right: 20%;
+    width: 260px;
+}
+
+#selectedElecImg {
+    width: 350px;
+    left: 50px;
+    height: 200px;
+    position: absolute;
+}
+
+.sandppr {
+    width: 70px;
+    margin-left: 60px;
+    position: absolute;
+    visibility: hidden;
+    animation-duration: 0.7s, 0.2s;
+    animation-iteration-count: 2, infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+    animation-timing-function: ease-in-out;
+}
+
+#sandpaper1 {
+    margin-top: 100px;
+    animation-name: horizontal1, rubbing;
+}
+
+@keyframes horizontal1 {
+    from {
+        margin-top: 65px;
+        margin-left: 158px;
+    }
+
+    to {
+        margin-top: 65px;
+        margin-left: 200px;
+    }
+}
+
+@keyframes rubbing {
+    from {
+        transform: rotate(-15deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+#sandpaper2 {
+    animation-name: horizontal2, rubbing;
+}
+
+@keyframes horizontal2 {
+    from {
+        margin-top: 104px;
+        margin-left: 60px;
+    }
+
+    to {
+        margin-top: 104px;
+        margin-left: 238px;
+    }
+}
+
+#sandpaper3 {
+    animation-name: horizontal3, rubbing;
+}
+
+@keyframes horizontal3 {
+    from {
+        margin-top: 153px;
+        margin-left: 103px;
+    }
+
+    to {
+        margin-top: 153px;
+        margin-left: 279px;
+    }
+}
+
+#sandpaper4 {
+    animation-name: horizontal4, rubbing;
+}
+
+@keyframes horizontal4 {
+    from {
+        margin-top: 183px;
+        margin-left: 124px;
+    }
+
+    to {
+        margin-top: 183px;
+        margin-left: 187px;
+    }
+}
+
+#sandpaper1ssm {
+    animation-name: h1ssm, rubbing;
+
+}
+
+@keyframes h1ssm {
+    from {
+        margin-top: 90px;
+        margin-left: 107px;
+    }
+
+    to {
+        margin-top: 90px;
+        margin-left: 200px;
+    }
+}
+
+#sandpaper2ssm {
+    animation-name: h2ssm, rubbing;
+}
+
+@keyframes h2ssm {
+    from {
+        margin-top: 128px;
+        margin-left: 101px;
+    }
+
+    to {
+        margin-top: 128px;
+        margin-left: 263px;
+    }
+}
+
+#sandpaper3ssm {
+    animation-name: h3ssm, rubbing;
+}
+
+@keyframes h3ssm {
+    from {
+        margin-top: 163px;
+        margin-left: 125px;
+    }
+
+    to {
+        margin-top: 163px;
+        margin-left: 222px;
+    }
+}
+
+#sandpaper4ssm {
+    animation-name: h4ssm, rubbing;
+}
+
+@keyframes h4ssm {
+    from {
+        margin-top: 182px;
+        margin-left: 159px;
+    }
+
+    to {
+        margin-top: 182px;
+        margin-left: 239px;
+    }
+}
+
+#sandpaper1ci {
+    animation-name: h1ci, rubbing;
+    animation-duration: 1s, 0.2s;
+}
+
+@keyframes h1ci {
+    from {
+        margin-top: 44px;
+        margin-left: 48px;
+    }
+
+    to {
+        margin-top: 44px;
+        margin-left: 300px;
+    }
+}
+
+#sandpaper2ci {
+    animation-name: h2ci, rubbing;
+    animation-duration: 1s, 0.2s;
+}
+
+@keyframes h2ci {
+    from {
+        margin-top: 98px;
+        margin-left: 48px;
+    }
+
+    to {
+        margin-top: 98px;
+        margin-left: 300px;
+    }
+}
+
+#sandpaper3ci {
+    animation-name: h3ci, rubbing;
+    animation-duration: 1s, 0.2s;
+}
+
+@keyframes h3ci {
+    from {
+        margin-top: 158px;
+        margin-left: 48px;
+    }
+
+    to {
+        margin-top: 158px;
+        margin-left: 300px;
+    }
+}
+
+#sandpaper4ci {
+    animation-name: h4ci, rubbing;
+    animation-duration: 1s, 0.2s;
+}
+
+@keyframes h4ci {
+    from {
+        margin-top: 224px;
+        margin-left: 48px;
+    }
+
+    to {
+        margin-top: 224px;
+        margin-left: 300px;
+    }
+}
+
+#sandpaper1tit {
+    animation-name: h1tit, rubbing;
+}
+
+@keyframes h1tit {
+    from {
+        margin-top: 52px;
+        margin-left: 176px;
+    }
+
+    to {
+        margin-top: 52px;
+        margin-left: 290px;
+    }
+}
+
+#sandpaper2tit {
+    animation-name: h2tit, rubbing;
+}
+
+@keyframes h2tit {
+    from {
+        margin-top: 91px;
+        margin-left: 128px;
+    }
+
+    to {
+        margin-top: 91px;
+        margin-left: 247px;
+    }
+}
+
+#sandpaper3tit {
+    animation-name: h3tit, rubbing;
+}
+
+@keyframes h3tit {
+    from {
+        margin-top: 134px;
+        margin-left: 84px;
+    }
+
+    to {
+        margin-top: 134px;
+        margin-left: 195px;
+    }
+}
+
+#sandpaper4tit {
+    animation-name: h4tit, rubbing;
+}
+
+@keyframes h4tit {
+    from {
+        margin-top: 190px;
+        margin-left: 73px;
+    }
+
+    to {
+        margin-top: 190px;
+        margin-left: 140px;
+    }
+}
+
+#dropdown3 {
+    margin-top: 6px;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 16.5px;
+}
+
+.figure {
+    width: 80px;
+    height: 65px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-left: 40px;
+}
+
+figcaption {
+    position: absolute;
+    font-size: 10px;
+}
+
+#rtbtn {
+    width: 60px;
+    position: absolute;
+    margin-left: 6px;
+}
+
+#psbtn {
+    width: 47px;
+    margin-left: 12px;
+}
+
+.pcbtn {
+    width: 20px;
+    margin-top: -11px;
+    margin-left: 26px;
+}
+
+.motor {
+    width: 60px;
+    margin-top: -6px;
+    margin-left: 3px;
+}
+
+#ctrlrbtn {
+    width: 51px;
+    margin-left: 12px;
+    margin-top: -13px;
+}
+
+#etbtn {
+    width: 51px;
+    margin-left: 12px;
+    margin-top: -13px;
+}
+
+#fig6 {
+    top: 56px;
+    position: absolute;
+    visibility: hidden;
+}
+
+#wpbtn {
+    width: 60px;
+}
+
+.resistanceTransformer {
+    width: 198px;
+    height: 184px;
+    left: 205px;
+    top: 94px;
+    position: absolute;
+    z-index: 2;
+}
+
+.setup {
+    width: 282px;
+    height: 300px;
+    left: 132px;
+    top: -4px;
+    z-index: 3;
+    position: absolute;
+}
+
+#powerPlug {
+    width: 68px;
+    height: 60px;
+    left: 468px;
+    position: absolute;
+    top: 8px;
+    z-index: 2;
+}
+
+#pressureCylinder {
+    width: 110px;
+    height: 100px;
+    left: 277px;
+    top: 25px;
+    position: absolute;
+    z-index: 2;
+}
+
+#motor {
+    width: 121px;
+    height: 101px;
+    position: absolute;
+    z-index: 2;
+    left: 265px;
+    top: 105px;
+}
+
+#greenrod {
+    position: absolute;
+    z-index: 3;
+    left: 312px;
+    width: 29px;
+    top: 143px;
+}
+
+#blackrod1 {
+    position: absolute;
+    visibility: hidden;
+    z-index: 3;
+    left: 306px;
+    width: 13px;
+    top: 206px;
+}
+
+#blackrod2 {
+    position: absolute;
+    visibility: hidden;
+    z-index: 2;
+    left: 341px;
+    width: 37px;
+    top: 205px;
+}
+
+#resistanceController {
+    width: 110px;
+    height: 100px;
+    left: 206px;
+    top: 44px;
+    position: absolute;
+    z-index: 2;
+}
+
+.copperTongs {
+    width: 100px;
+    height: 84px;
+    position: absolute;
+    z-index: 2;
+}
+
+#tong1 {
+    left: 336px;
+    top: 199px;
+}
+
+#tong2 {
+    left: 338px;
+    top: 150px;
+}
+
+.seamElecs {
+    width: 54px;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+}
+
+#se1 {
+    left: 365px;
+    top: 134px;
+}
+
+#se2 {
+    left: 364px;
+    top: 190px;
+}
+
+#workpiece {
+    top: 177px;
+    left: 508px;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    animation: magnify 1.7s linear;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+
+@keyframes magnify {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0.7, 0.7);
+    }
+}
+
+@keyframes placewp {
+    from {
+        transform: scale(0.7, 0.7);
+        top: 177px;
+        left: 508px;
+    }
+
+    to {
+        transform: scale(0.7, 0.7);
+        top: 140px;
+        left: 239px;
+    }
+}
+
+@keyframes seamwp {
+    from {
+        transform: scale(0.7, 0.7);
+        top: 177px;
+        left: 508px;
+    }
+
+    to {
+        transform: scale(0.7, 0.7);
+        top: 107px;
+        left: 259px;
+    }
+}
+
+.components {
+    visibility: hidden;
+}
+
+#targetPS {
+    width: 40px;
+    height: 40px;
+    left: 239px;
+    top: 170px;
+    /* z-index: 3; */
+    position: absolute;
+}
+
+.points {
+    width: 15px;
+    height: 15px;
+    z-index: 4;
+    position: absolute;
+}
+
+#top {
+    left: 278px;
+    top: 45px;
+}
+
+#topTarget {
+    left: 288px;
+    top: 176px;
+}
+
+#side {
+    left: 294px;
+    top: 73px;
+}
+
+#sideTarget {
+    left: 333px;
+    top: 252px;
+}
+
+#topline {
+    visibility: hidden;
+    position: absolute;
+    top: 35px;
+    left: 278px;
+    height: 144px;
+    z-index: 3;
+}
+
+#sideline {
+    position: absolute;
+    top: 69px;
+    left: 287px;
+    height: 209px;
+    z-index: 3;
+    visibility: hidden;
+}
+
+.smallArea {
+    left: 327px;
+    top: 205px;
+    width: 20px;
+    border: #748f99 solid 1px;
+    height: 20px;
+    z-index: 5;
+    position: absolute;
+}
+
+#zoomedArea {
+    position: absolute;
+    top: 125px;
+    left: 598px;
+    z-index: 3;
+}
+
+#zoomedArea2 {
+    position: absolute;
+    top: 92px;
+    left: 573px;
+    height: 196px;
+    width: 239px;
+    border: #6cbcdc solid 1px;
+    z-index: 3;
+}
+
+#zoom {
+    height: 178px;
+    border: #6cbcdc solid 1px;
+}
+
+#heat {
+    height: 50px;
+    width: 28px;
+    position: absolute;
+    left: 78px;
+    top: 88px;
+    animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.wheel {
+    position: absolute;
+    width: 95px;
+    height: 86px;
+    left: 95px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#wheel1 {
+    top: 5px;
+    z-index: 3;
+    animation: w1motion 7s linear, spin 2.5s linear infinite;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+
+@keyframes w1motion {
+    from {
+        top: 5px;
+        left: 95px;
+    }
+
+    to {
+        left: 22px;
+        top: 22px;
+    }
+}
+
+#wheel2 {
+    top: 94px;
+    animation: w2motion 7s linear, spin 2.5s linear infinite;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+
+@keyframes w2motion {
+    from {
+        top: 94px;
+        left: 95px;
+    }
+
+    to {
+        top: 116px;
+        left: 29px;
+    }
+}
+
+#zoomseam {
+    position: absolute;
+    top: 27px;
+    width: 239px;
+    height: 130px;
+    z-index: 2;
+}
+
+.line {
+    height: 2px;
+    background: #CCCCCC;
+    position: absolute;
+    top: 2px;
+    width: 6px;
+    z-index: 2;
+}
+
+.linediv {
+    width: 8px;
+    height: 61px;
+    position: absolute;
+    left: 103px;
+    top: 58px;
+    z-index: 2;
+    transform: rotate(71deg);
+}
+
+#line {
+    animation: increase 7s linear;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+#resultPanel {
+    width: 860px;
+    height: 367px;
+    background-color: #F2F2F2;
+    position: absolute;
+    top: 122px;
+    left: 315px;
+    visibility: hidden;
+}
+
+.resultSlide {
+    border: 2px solid #495C83;
+    border-radius: 2%;
+    width: 840px;
+    position: absolute;
+    margin: 10px;
+    height: 345px;
+    visibility: hidden;
+}
+
+#cleanWorkpiece {
+    left: 300px;
+    top: 50px;
+    width: 250px;
+    height: 280px;
+    position: absolute;
+}
+
+
+#equipmentDetails,
+#preprocessing,
+#simulation,
+#result,
+#reset,
+#instructions {
+    margin-left: 29px;
+    display: block;
+    width: 155px;
+    font-size: 16px;
+}
+
+#instructions {
+    margin-top: 10px;
+}
+
+#equipmentDetails {
+    margin-top: 25px;
+}
+
+#preprocessing {
+    margin-top: 25px;
+}
+
+#simulation {
+    margin-top: 25px;
+}
+
+#result {
+    margin-top: 25px;
+}
+
+#reset {
+    margin-top: 25px;
+}
+
+#equipmentDetails:hover,
+#preprocessing:hover,
+#simulation:hover,
+#result:hover,
+#reset:hover,
+#objective:hover,
+#details:hover,
+#back:hover,
+#next:hover,
+#instructions:hover,
+#back2btnCtrl:hover,
+#nextSelected:hover,
+#afterCleanBtn:hover,
+#back2selection:hover {
+    background-color: #6E85B7;
+    color: white;
+    border: 2px solid #495C83;
+    border-radius: 10%;
+}
+
+footer {
+    background-color: #495C83;
+    width: 1175px;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: 367px;
+}
